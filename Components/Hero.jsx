@@ -1,7 +1,10 @@
 'use client'
 
 import React from 'react'
+import Typed from 'typed.js'
 import { Menu, X, ChevronDown, ChevronRight } from 'lucide-react'
+import { useEffect, useRef } from 'react'
+
 
 const menuItems = [
   {
@@ -24,6 +27,31 @@ export default function Hero() {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
   }
+
+  const typingRef = useRef(null);
+
+    useEffect(() => {
+        const options = {
+            strings: [
+                'Swasthya Connect',
+                'Apke Swastha Ka Sambandha',
+                'An Integrated Healthcare Management System'
+            ],
+            typeSpeed:50,
+            backSpeed: 50,
+            backDelay: 3000,
+            loop: true,
+            showCursor: true,
+        };
+
+        const typingInstance = new Typed(typingRef.current, options);
+
+        return () => {
+            typingInstance.destroy();
+        };
+    }, []);
+
+
   return (
     <div className="relative w-full bg-white">
      
@@ -57,11 +85,10 @@ export default function Hero() {
           </div>
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-              Lorem ipsum dolor sit amet consectetur dicta.
+              Swasthya Connect.
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat
-              commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.
+              An Integrated Healthcare Management System. We aim towards making healthcare better and efficient for all.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-2">
               <button
@@ -80,6 +107,12 @@ export default function Hero() {
           </div>
         </div>
       </div>
+       <div className="text navbar-text text-2xl sm:text-5xl lg:text-5xl tracking-wide flex flex-col sm:flex-row justify-center p-5 sm:p-10 mt-5 mb-5 text-gray-900 ">
+          <div className="typing mb-5 sm:mb-0 sm:mr-5">
+            <span ref={typingRef} />
+          </div>
+        </div>
+
     </div>
   )
 }
