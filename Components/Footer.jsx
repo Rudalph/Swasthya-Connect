@@ -1,9 +1,9 @@
 import React from 'react'
 
+
 export default function Footer() {
   return (
     <section className="relative overflow-hidden py-3">
-        
         <div className='flex justify-center ml-72'>
              <p className="mb-4  text-base font-medium"><b>Swasthya Connect</b></p>
         </div>

@@ -3,7 +3,8 @@
 import React from 'react'
 import Typed from 'typed.js'
 import { Menu, X, ChevronDown, ChevronRight } from 'lucide-react'
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef } from 'react';
+
 
 
 const menuItems = [
@@ -34,7 +35,7 @@ export default function Hero() {
         const options = {
             strings: [
                 'Swasthya Connect',
-                'Apke Swastha Ka Sambandha',
+                'आपके स्वास्थ्य का संबंध',
                 'An Integrated Healthcare Management System'
             ],
             typeSpeed:50,
@@ -53,6 +54,7 @@ export default function Hero() {
 
 
   return (
+    <>
     <div className="relative w-full bg-white">
      
       <div className="relative isolate z-0 px-6 pt-14 lg:px-8">
@@ -112,7 +114,17 @@ export default function Hero() {
             <span ref={typingRef} />
           </div>
         </div>
-
+        <section className="relative overflow-hidden py-3">
+          <div className='flex justify-center'>
+              <p className="mb-4  text-base font-medium"><b>Swasthya Connect</b></p>
+          </div>
+          <div className='flex justify-center '>
+              <p className="text-sm text-gray-600">
+                    &copy; Copyright 2024. All Rights Reserved by Swasthya Connect.
+              </p>
+          </div>
+      </section>
     </div>
+    </>
   )
 }

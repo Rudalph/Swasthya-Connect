@@ -1,7 +1,6 @@
 import React from 'react'
 import Navbar from './navbar'
 import Hero from './Hero'
-import Footer from './Footer'
 
 const Homepage = () => {
   return (
@@ -17,7 +16,7 @@ const Homepage = () => {
             {/* Add other components/content as needed */}
           </div>
         </div>
-        <Footer/>
+       
     </div>
   )
 }
