@@ -16,7 +16,7 @@ export default function page()  {
           </div>
          
 
-        <section className='flex-1 overflow-y-auto  p-10'>
+      <section className='flex-1 overflow-y-auto  p-10'>
       <div className="mx-auto max-w-5xl px-5 py-24">
         <div className="mx-auto flex flex-wrap items-center lg:w-4/5">
           <img
