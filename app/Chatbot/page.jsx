@@ -1,8 +1,8 @@
 "use client"
 import React, { useState } from 'react';
 import Navbar from '@/Components/navbar';
-import { Nav } from 'react-bootstrap';
-
+import { FaRobot } from "react-icons/fa6";
+import { FaUser } from "react-icons/fa";
 const ChatBot = () => {
   const [chatHistory, setChatHistory] = useState([]);
   const [userInput, setUserInput] = useState('');
@@ -37,18 +37,19 @@ const ChatBot = () => {
             <div key={index} className="flex flex-col space-y-2">
               {/* User question */}
               <div className="flex justify-end">
-                <div className="bg-gray-200 text-gray-800 rounded-lg px-4 py-2 m-2">
+                <div className="bg-gray-200 text-gray-800 rounded-lg px-4 py-2 m-2 flex justify-evenly">
                   {entry.user}
+                  <FaUser size={50}/>
                 </div>
-                <b>User</b>
+                
               </div>
               {/* Model response */}
+              <FaRobot size={66} />
               <div className="flex justify-start">
-                <b>Model</b>
-                <div className="bg-blue-500 text-white rounded-lg px-4 py-2">
+                <div className="bg-blue-500 text-white rounded-lg px-4 flex justify-evenly">
                   {entry.model}
                 </div>
-                </div>
+              </div>
             </div>
           ))}
         </div>
