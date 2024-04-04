@@ -68,6 +68,13 @@ export default function navbar() {
               <Wrench className="h-5 w-5" aria-hidden="true" />
               <span className="mx-2 text-sm font-medium">Diagnostic Labs</span>
             </a>
+            <a
+              className="flex transform items-center rounded-lg px-3 py-2 text-gray-600 transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700"
+              href="/Medicare"
+            >
+              <BarChart className="h-5 w-5" aria-hidden="true" />
+              <span className="mx-2 text-sm font-medium">Alternate Medicines</span>
+            </a>
           </div>
         </nav>
       </div>
